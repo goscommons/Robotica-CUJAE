@@ -1,0 +1,16 @@
+{
+  "name": "go-commons-groups-portal-template",
+  "version": "1.0.0",
+  "description": "This website is like a little portal to the Go!Commons groups main resources, and channels to most useful media resources including: chat group, gitlab/github repositories. Each website is generated from a customizable template that allows for flexible composition of content using markdown. A yml file should be enough to re-edit and create new content in combination with markdown.",
+  "main": "index.js",
+  "scripts": {
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "author": "cperezcapote",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "vuepress": "^0.14.8"
+  }
+}
