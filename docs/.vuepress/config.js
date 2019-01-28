@@ -1,5 +1,5 @@
 module.exports = {
   title: 'Groups Portal Template',
   dest: 'public',
-  base: '/go-commons-groups-template/'
+  base: '/go-commons-website-template/'
 };
