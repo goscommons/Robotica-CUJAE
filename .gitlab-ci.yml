@@ -14,4 +14,4 @@ pages:
     - public
   
   only:
-  - gl-pages
+  - master
