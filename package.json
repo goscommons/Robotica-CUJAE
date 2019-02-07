@@ -10,7 +10,9 @@
   "author": "cperezcapote",
   "license": "MIT",
   "private": false,
-  "devDependencies": {
-    "vuepress": "^0.14.8"
+  "devDependencies": {},
+  "dependencies": {
+    "vuepress": "^1.0.0-alpha.36",
+    "vuepress-theme-gocommons": "^1.0.1"
   }
 }
