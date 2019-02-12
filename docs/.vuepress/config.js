@@ -1,7 +1,7 @@
 module.exports = {
   title: 'CNC table design',
   dest: 'public',
-  base: '/go-commons-website-template/',
+  base: '/cnc-table-documentation/',
   theme: 'vuepress-theme-gocommons',
 
   themeConfig: {
