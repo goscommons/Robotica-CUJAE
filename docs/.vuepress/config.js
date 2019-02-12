@@ -7,8 +7,14 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'The Project', link: '/Guide/' },
+      { text: 'The Project', link: '/the-project/' },
       { text: 'Guide', link: 'https://google.com' },
+    ],
+
+    sidebar: [
+      ['/the-project/', 'The project'],
+      ['/CODEofCONDUCT.md', 'Code of conduct'],
     ]
+
   }
 };
