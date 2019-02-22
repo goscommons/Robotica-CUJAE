@@ -6,9 +6,11 @@ module.exports = {
 
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'The Project', link: '/the-project/' },
-      { text: 'Guide', link: 'https://google.com' },
+      { text: 'Intro', link: '/1_Intro/' },
+      { text: 'Build', link: '/2_Build/' },
+      { text: 'Contribute', link: '/3_Contribute/' },
+      { text: 'Training', link: '/4_Training/' },
+      { text: 'Kit', link: '/5_Kit/' },
     ],
 
     sidebar: [
