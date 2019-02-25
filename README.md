@@ -61,6 +61,75 @@ pages:
 
 ```
 
+## GitHub Pages
+
+1. Set correct `base` in `docs/.vuepress/config.js`.
+
+   If you are deploying to `https://<USERNAME>.github.io/`, you can omit `base` as it defaults to `"/"`.
+
+   If you are deploying to `https://<USERNAME>.github.io/<REPO>/`, (i.e. your repository is at `https://github.com/<USERNAME>/<REPO>`), set `base` to `"/<REPO>/"`.
+
+2. Inside your project, create `deploy.sh` with the following content (with highlighted lines uncommented appropriately) and run it to deploy:
+
+``` bash{13,20,23}
+#!/usr/bin/env sh
+
+# abort on errors
+set -e
+
+# build
+npm run docs:build
+
+# navigate into the build output directory
+cd docs/.vuepress/dist
+
+# if you are deploying to a custom domain
+# echo 'www.example.com' > CNAME
+
+git init
+git add -A
+git commit -m 'deploy'
+
+# if you are deploying to https://<USERNAME>.github.io
+# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+
+# if you are deploying to https://<USERNAME>.github.io/<REPO>
+# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+
+cd -
+```
+
+::: tip
+You can also run the above script in your CI setup to enable automatic deployment on each push.
+:::
+
+### Github Pages and Travis CI
+
+1. Set correct `base` in `docs/.vuepress/config.js`.
+
+   If you are deploying to `https://<USERNAME or GROUP>.github.io/`, you can omit `base` as it defaults to `"/"`.
+
+   If you are deploying to `https://<USERNAME or GROUP>.github.io/<REPO>/`, (i.e. your repository is at `https://github.com/<USERNAME>/<REPO>`), set `base` to `"/<REPO>/"`.
+
+2. Create a file named `.travis.yml` in the root of your project.
+
+3. Use Github Pages deploy provider template and follow the [travis documentation](https://docs.travis-ci.com/user/deployment/pages/).
+
+``` yaml
+language: node_js
+script:
+  - npm run docs:build
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: docs/.vuepress/dist
+  github-token: $GITHUB_TOKEN # a token generated on github allowing travis to push code on you repository
+  keep-history: true
+  on:
+    branch: master
+```
+
+
 This sets up a `node9.11.1` environment, then uses `yarn install` to install dependencies and `yarn build` to build out the website to the `./public` directory.
 It also caches the `node_modules` directory to speed up sebsequent builds.
 
