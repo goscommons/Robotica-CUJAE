@@ -5,6 +5,8 @@ module.exports = {
   theme: 'vuepress-theme-gocommons',
 
   themeConfig: {
+    projectLogo: "/logo.png",
+    projectTitle: "Grupo de Robótica CUJAE",
     nav: [
       { text: 'Intro', link: '/1_Intro/' },
       { text: 'Build', link: '/2_Build/' },
