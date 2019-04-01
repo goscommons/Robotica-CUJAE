@@ -13,6 +13,6 @@
   "devDependencies": {},
   "dependencies": {
     "vuepress": "^1.0.0-alpha.36",
-    "vuepress-theme-gocommons": "^1.0.1"
+    "vuepress-theme-gocommons": "^1.0.5"
   }
 }
